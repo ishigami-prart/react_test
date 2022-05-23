@@ -4,7 +4,7 @@ import ColorfulMessage from "./components/ColorfulMessage";
 const App = () => {
   console.log("最初");
   const [num, setNum] = useState(0);
-  const [faceShowFlag, setFaceShowFlag] = useState(false);
+  const [faceShowFlag, setFaceShowFlag] = useState(true);
   const onClickCountUp = () => {
     setNum(num + 1);
   };
@@ -20,12 +20,9 @@ const App = () => {
         faceShowFlag && setFaceShowFlag(false);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [num]);
 
-  const contentLedyLedyStyle = {
-    color: "pink",
-    fontSize: "18px"
-  };
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは</h1>
